@@ -1,0 +1,14 @@
+{% extends "SchoolAppBundle::simplesurance.html.twig" %}
+
+{% block title "Index.html.twig" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <form action="{{ path('index_gmailsend') }}" method="post" >
+        <p>
+            <button type="submit">send</button>
+        </p>
+    </form>
+    <p>{{ message | raw }}</p>
+{% endblock %}

@@ -1,0 +1,5 @@
+services:
+    kernel.listener.paramListener:
+        class:        Salamon\ParamListener
+        tags:
+            -  { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

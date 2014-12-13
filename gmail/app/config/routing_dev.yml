@@ -1,0 +1,33 @@
+_index_page:
+    pattern:  /
+    defaults: { _controller: SchoolAppBundle:Index:index }
+
+_index_gmail:
+    pattern:  /
+    defaults: { _controller: SchoolAppBundle:Index:gmail }
+
+_index:
+    resource: "@SchoolAppBundle/Controller/IndexController.php"
+    type:     annotation
+
+
+#end of frontend
+
+_assetic:
+    resource: .
+    type:     assetic
+
+_wdt:
+    resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
+    prefix:   /_wdt
+
+_profiler:
+    resource: "@WebProfilerBundle/Resources/config/routing/profiler.xml"
+    prefix:   /_profiler
+
+_configurator:
+    resource: "@SensioDistributionBundle/Resources/config/routing/webconfigurator.xml"
+    prefix:   /_configurator
+
+_main:
+    resource: routing.yml

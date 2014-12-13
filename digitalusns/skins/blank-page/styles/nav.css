@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+ul#menu{
+padding:5px 20px;
+margin:0;
+}
+
+ul#menu li{
+display:inline;
+margin:0 10px;
+}
+
+ul#menu li a{
+text-decoration:none;
+font-size:14px;
+color:#000;
+}
