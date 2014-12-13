@@ -1,0 +1,37 @@
+{% extends "SchoolAppBundle::front.html.twig" %}
+
+{% block title "Produkt" %}
+
+{% block content_header '' %}
+
+{% block content %}
+
+        <!--columns-->
+        <div class="content_subpage">
+        
+        <div class="column_l_dbl">
+        	<h1>Rejestracja</h1>
+			<form action="{{ path('_index_register') }}" method="post" {{ form_enctype(form) }}>
+			    {{ form_widget(form) }}
+			    <p>
+			        <button type="submit">Zarejestruj</button>
+			    </p>
+			</form>
+   	  	</div><!--end column_l_dbl-->
+        
+      <div class="column_r">
+       		<div class="blue_box">
+                <h3>Dell</h3>
+                <p class="white">Producent komputerów, monitorów, laptopów, urządzeń biurowych, akcesoriów komputerowych. Producent komputerów, monitorów, laptopów, urządzeń biurowych, akcesoriów komputerowych.</p>
+                <p class="white">Producent komputerów, monitorów, laptopów, urządzeń biurowych, akcesoriów komputerowych.</p>
+                <p> www.dell.pl</p>
+            </div><!--end blue box--><!--end blue box-->
+            
+        </div><!--end column_r-->
+        
+        <div class="clr"></div><!--end columns-->
+        </div><!--end content-->
+  </div><!--end frame-->
+</div><!--end mid_bgr-->
+<!------------------------------------------------------------------------------------------------------->
+{% endblock %}

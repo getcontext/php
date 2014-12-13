@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="{{ asset('bundles/schoolapp/admin/css/style_admin.css') }}" type="text/css" media="all" />
+        <title>{% block title %}ayPanel 2.0 - panel administracyjny{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+		<div id="menu_panel">
+			<div id="logo"><img src="{{ asset('bundles/schoolapp/admin/images/logo_05.png') }}" width="109" height="43" /></div>
+		    <div class="menu_btn"><a href=".">Pulpit</a></div>
+		  	<div class="menu_btn"><a href="#">Edytor tekstów</a></div>
+		  	<div class="menu_btn"><a href="#">Fotogaleria</a></div>
+		    <div class="menu_btn"><a href="{{ path('category') }}">Kategorie</a></div>
+		    <div class="menu_btn"><a href="{{ path('product') }}">Katalog</a></div>
+		    <div class="menu_btn"><a href="{{ path('user') }}">Użytkownicy</a></div>
+		    <div class="menu_btn"><a href="pomoc.php">Pomoc</a></div>
+		</div>    
+		<div id="content_panel">
+		    {% if app.session.flash('notice') %}
+		        <div class="flash-message">
+		            <em>Notice</em>: {{ app.session.flash('notice') }}
+		        </div>
+		    {% endif %}    
+		    {% block content %}
+		    {% endblock %}
+			<div class="footer">
+		    	Panel administracyjny ayPanel v 2.0<br />
+		        Wszelkie prawa zastrzeżone © aymoo 2012
+		    </div>
+		</div>
+		<div class="clr"></div>
+	</body>
+</html>

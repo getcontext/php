@@ -1,0 +1,39 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_covus_edit') }}" {{ form_enctype(form) }} method="POST"
+      class="fos_user_registration_register">
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'alltrue.submit'|trans }}"/>
+    </div>
+</form>
+
+<script>
+    function checkAllTrue() {
+        var i = document.getElementsByTagName("input");
+        for (var k in i) {
+            var el = i[k];
+            var patt = /fos_user_alltrue_form/g;
+            var rs = patt.test(el.name);
+            if (el.type == "checkbox" && rs) {
+                el.onclick = function () {
+                    var ii = document.getElementsByTagName("input");
+                    var c = 0;
+                    for (var kk in ii) {
+                        var el = ii[kk];
+                        var patt = /fos_user_alltrue_form/g;
+                        var rs = patt.test(el.name);
+                        if (el.type == "checkbox" && el.checked && rs) {
+                            console.log(el.name + el.checked + rs + c);
+                            c++;
+                        }
+                    }
+                    if (c / 3 > 2)return false;
+                    return true;
+                }
+            }
+        }
+    }
+
+    checkAllTrue();
+</script>
