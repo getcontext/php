@@ -1,0 +1,36 @@
+Salamon\Bundle\CovusBundle\Entity\Foo:
+    type:  entity
+    table: covus_foo
+    id:
+        user_id:
+            type: integer
+    fields:
+        val1:
+            type: boolean
+            nullable: true
+        val2:
+            type: boolean
+            nullable: true
+        val3:
+            type: boolean
+            nullable: true
+        val4:
+            type: boolean
+            nullable: true
+        val5:
+            type: boolean
+            nullable: true
+        createdAt:
+          type: datetime
+        updatedAt:
+          type: datetime
+          nullable: true
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAt ]
+        preUpdate: [ setUpdatedAt ]
+    oneToOne:
+      user:
+        targetEntity: User
+        joinColumn:
+           name: user_id
+           referencedColumnName: id
