@@ -1,4 +1,0 @@
-GalleryAppBundle_category:
-    resource: "@GalleryAppBundle/Resources/config/routing/category.yml"
-    prefix:   /category
-
