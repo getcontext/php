@@ -1,8 +1,0 @@
-Salamon\Bundle\CovusBundle\Entity\User:
-    type:  entity
-    table: covus_user
-    id:
-        id:
-            type: integer
-            generator:
-                strategy: AUTO
